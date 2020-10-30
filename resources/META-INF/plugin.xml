@@ -1,0 +1,29 @@
+<idea-plugin>
+  <id>com.advancable.libgdxhelper</id>
+  <name>LibGDX Helper</name>
+  <version>1.0</version>
+  <vendor email="somkin.van@yandex.ru" url="">Advancable</vendor>
+
+  <description><![CDATA[
+      Adds "Browse LibGDX Wiki" button in Help.<br>
+      Adds "Search LibGDX Query" option for selected text.
+    ]]></description>
+
+  <idea-version since-build="173.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+
+  <actions>
+    <action id="BrowseWikiAction" class="BrowseWikiAction" text="Browse LibGDX Wiki"
+            description="Opens libgdx wiki in browser.">
+      <add-to-group group-id="HelpMenu" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl O"/>
+    </action>
+    <action id="SearchQueryAction" class="SearchQueryAction" text="Search LibGDX Query"
+            description="Searches &quot;libgdx *selected text*&quot; in yandex.">
+      <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$SearchWeb"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl K"/>
+    </action>
+  </actions>
+
+</idea-plugin>
